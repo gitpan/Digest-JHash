@@ -1,0 +1,98 @@
+<HTML>
+<HEAD>
+<TITLE>JHash.pm</TITLE>
+<LINK REL="stylesheet" HREF="../html/docs.css" TYPE="text/css">
+<LINK REV="made" HREF="mailto:">
+</HEAD>
+
+<BODY>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD CLASS=block VALIGN=MIDDLE WIDTH=100% BGCOLOR="#cccccc">
+<FONT SIZE=+1><STRONG><P CLASS=block>&nbsp;JHash.pm</P></STRONG></FONT>
+</TD></TR>
+</TABLE>
+
+<A NAME="__index__"></A>
+<!-- INDEX BEGIN -->
+
+<UL>
+
+    <LI><A HREF="#name">NAME</A></LI>
+    <LI><A HREF="#synopsis">SYNOPSIS</A></LI>
+    <LI><A HREF="#description">DESCRIPTION</A></LI>
+    <LI><A HREF="#functions">FUNCTIONS</A></LI>
+    <LI><A HREF="#exports">EXPORTS</A></LI>
+    <LI><A HREF="#speed note">SPEED NOTE</A></LI>
+    <LI><A HREF="#authors">AUTHORS</A></LI>
+    <LI><A HREF="#see also">SEE ALSO</A></LI>
+</UL>
+<!-- INDEX END -->
+
+<HR>
+<P>
+<H1><A NAME="name">NAME</A></H1>
+<P>Digest::JHash - Perl extension for JHash Hashing Algoritm</P>
+<P>
+<HR>
+<H1><A NAME="synopsis">SYNOPSIS</A></H1>
+<PRE>
+    use Digest::JHash qw(jhash);</PRE>
+<PRE>
+    $digest = jhash($data);</PRE>
+<PRE>
+    # note that calling jhash() directly like this is the fastest way:</PRE>
+<PRE>
+    $digest = Digest::JHash::jhash($data);</PRE>
+<P>
+<HR>
+<H1><A NAME="description">DESCRIPTION</A></H1>
+<P>The <CODE>Digest::JHash</CODE> module allows you to use the fast JHash hashing algorithm
+developed by Bob Jenkins from within Perl programs. The algorithm takes as
+input a message of arbitrary length and produces as output a 32-bit
+``message digest'' of the input in the form of an unsigned long integer.</P>
+<P>Call it a low calorie version of MD5 if you like.</P>
+<P>See <A HREF="http://burtleburtle.net/bob/hash/doobs.html">http://burtleburtle.net/bob/hash/doobs.html</A> for more information.</P>
+<P>
+<HR>
+<H1><A NAME="functions">FUNCTIONS</A></H1>
+<DL>
+<DT><STRONG><A NAME="item_jhash"><CODE>jhash($data)</CODE></A></STRONG><BR>
+<DD>
+This function will calculate the JHash digest of the ``message'' in $data
+and return a 32 bit integer result (an unsigned long in the C)
+<P></P></DL>
+<P>
+<HR>
+<H1><A NAME="exports">EXPORTS</A></H1>
+<P>None by default but you can have the <A HREF="#item_jhash"><CODE>jhash()</CODE></A> function if you ask nicely.
+See below for reasons not to use Exporter (it is slower than a direct call)</P>
+<P>
+<HR>
+<H1><A NAME="speed note">SPEED NOTE</A></H1>
+<P>If speed is a major issue it is roughly twice as fast to do call the <A HREF="#item_jhash"><CODE>jhash()</CODE></A>
+function like Digest::JHash::jhash('message') than it is to import the
+<A HREF="#item_jhash"><CODE>jhash()</CODE></A> method using Exporter so you can call it as simply jhash('message').
+There is a short script that demonstrates the speed of differecnt calling
+methods (direct, OO and Imported) in misc/oo_vs_func.pl</P>
+<P>
+<HR>
+<H1><A NAME="authors">AUTHORS</A></H1>
+<P>The JHash implementation was written by Bob Jenkins
+(<CODE>bob_jenkins@burtleburtle.net</CODE>).</P>
+<P>This perl extension was written by Andrew Towers
+(<CODE>mariofrog@bigpond.com</CODE>).</P>
+<P>A few mods were added by James Freeman
+(<CODE>james.freeman@id3.org.uk</CODE>).</P>
+<P>
+<HR>
+<H1><A NAME="see also">SEE ALSO</A></H1>
+<P><A HREF="http://burtleburtle.net/bob/hash/doobs.html">http://burtleburtle.net/bob/hash/doobs.html</A></P>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=100%>
+<TR><TD CLASS=block VALIGN=MIDDLE WIDTH=100% BGCOLOR="#cccccc">
+<FONT SIZE=+1><STRONG><P CLASS=block>&nbsp;JHash.pm</P></STRONG></FONT>
+</TD></TR>
+</TABLE>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,13 @@
+MANIFEST
+Changes
+JHash.c
+JHash.pm
+JHash.xs
+Makefile.PL
+README
+test.pl
+vc70.pdb
+misc/make_manifest.pl
+misc/oo_vs_func.pl
+html/docs.css
+html/JHash.html
