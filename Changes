@@ -17,3 +17,8 @@ Revision history for Perl extension Digest::JHash.
 
 0.03 Wed Jun 04 2008
     - Repackaged into Kwalitee compliant package
+
+0.04 Wed Jun 04 2008
+    - Moved developer only tests kwalitee.t and spelling.t to misc/ to
+      stop kwalitee from demanding they be listed as build pre-reqs in META.yml
+

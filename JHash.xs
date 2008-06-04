@@ -74,6 +74,8 @@ unsigned long jhash( SV* str )
 
 MODULE = Digest::JHash        PACKAGE = Digest::JHash
 
+PROTOTYPES: ENABLE
+
 unsigned long
 jhash(str)
     SV*    str
