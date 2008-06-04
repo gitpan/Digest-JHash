@@ -1,22 +1,29 @@
 package Digest::JHash;
 
 use strict;
-
+use warnings;
 require Exporter;
 require DynaLoader;
+use vars qw(@ISA @EXPORT_OK $VERSION);
 
-our @ISA = qw(Exporter DynaLoader);
+@ISA = qw(Exporter DynaLoader);
 
-our @EXPORT_OK = qw( jhash );
-our $VERSION   = '0.02';
+@EXPORT_OK = qw( jhash );
+$VERSION   = '0.03';
 
 bootstrap Digest::JHash $VERSION;
 
 1;
 
+__END__
+
+=pod
+
+=for stopwords JHash burtleburtle bigpond Jenkins
+
 =head1 NAME
 
-Digest::JHash - Perl extension for JHash Hashing Algoritm
+Digest::JHash - Perl extension for 32 bit Jenkins Hashing Algorithm
 
 =head1 SYNOPSIS
 
@@ -60,22 +67,28 @@ See below for reasons not to use Exporter (it is slower than a direct call)
 If speed is a major issue it is roughly twice as fast to do call the jhash()
 function like Digest::JHash::jhash('message') than it is to import the
 jhash() method using Exporter so you can call it as simply jhash('message').
-There is a short script that demonstrates the speed of differecnt calling
-methods (direct, OO and Imported) in misc/oo_vs_func.pl
+There is a short script that demonstrates the speed of different calling
+methods (direct, OO and Imported) in examples/oo_vs_func.pl
 
 =head1 AUTHORS
 
 The JHash implementation was written by Bob Jenkins
-(C<bob_jenkins@burtleburtle.net>).
+<bob_jenkins [at] burtleburtle [dot] net>.
 
 This perl extension was written by Andrew Towers
-(C<mariofrog@bigpond.com>).
+<mariofrog [at] bigpond [dot] com>.
 
 A few mods were added by James Freeman
-(C<james.freeman@id3.org.uk>).
+<airmedical [at] gmail [dot] com>).
 
 =head1 SEE ALSO
 
 http://burtleburtle.net/bob/hash/doobs.html
+
+=head1 LICENSE
+
+This package is free software and is provided "as is" without express or
+implied warranty. It may be used, redistributed and/or modified under the
+terms of the Artistic License 2.0. A copy is include in this distribution.
 
 =cut

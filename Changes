@@ -14,3 +14,6 @@ Revision history for Perl extension Digest::JHash.
     - Added DEBUG const to C code for conveneience and to conform
       with coding conventions of PHB
     - Cleaned up Makefile.PL to minimal case
+
+0.03 Wed Jun 04 2008
+    - Repackaged into Kwalitee compliant package

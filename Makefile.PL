@@ -2,12 +2,12 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     'NAME'            => 'Digest::JHash',
-    'VERSION_FROM'    => 'JHash.pm',
-    'PREREQ_PM'       => {},
-    'LIBS'            => [''], # e.g., '-lm'
-    'DEFINE'          => '', # e.g., '-DHAVE_SOMETHING'
-    # Insert -I. if you add *.h files later:
-    'INC'             => '', # e.g., '-I/usr/include/other'
-    # Un-comment this if you add C files to link with later:
-    # 'OBJECT'        => '$(O_FILES)', # link all the C files too
+    'VERSION_FROM'    => 'lib/Digest/JHash.pm',
+    ($] >= 5.005 ?
+      (ABSTRACT_FROM  => 'lib/Digest/JHash.pm',
+       AUTHOR         => 'Dr James Freeman') :
+      ()
+    ),
+    LICENSE           => 'artistic_2',
+    realclean         => { FILES => 'Digest-JHash* *.tmp *.bak *.c' },
 );

@@ -1,9 +1,9 @@
-Digest/JHash version 0.01
+Digest/JHash version 0.03
 =========================
 
 INSTALLATION
 
-To install this module type the following:
+To install this module type the following (nmake on Win32):
 
    perl Makefile.PL
    make
@@ -29,5 +29,5 @@ R&D (Rip-off and Duplicate) as desired.
 
 Feel free to remove this copyright and call it your own if that makes you happy.
 
-Copyright (C) 2003 Andrew Towers and James Freeman.
+Copyright (C) 2003-2008 Andrew Towers and James Freeman.
 
