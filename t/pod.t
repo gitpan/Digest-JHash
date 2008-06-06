@@ -5,8 +5,7 @@ use Test;
 eval "use Test::Pod 1.00";
 
 if ($@) {
-    plan tests => 1;
-    skip("Test::Pod 1.00 required for testing POD");
+    print "1..0 # Skip Test::Pod 1.00 required for testing POD\n";
 }
 else {
     if ( $ENV{RELEASE_TESTING} ) {
@@ -14,7 +13,6 @@ else {
         all_pod_files_ok(all_pod_files( @poddirs ));
     }
     else {
-        plan tests => 1;
-        skip( "Author only private tests" );
+        print "1..0 # Skip Author only pod tests not required\n";
     }
 }

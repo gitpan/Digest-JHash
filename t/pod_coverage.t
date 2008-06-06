@@ -16,16 +16,14 @@ if ( cwd() =~ m/t$/ ) {
 eval "use Test::Pod::Coverage 1.00";
 
 if ($@) {
-    plan tests => 1;
-    skip("Test::Pod::Coverage 1.00 required for testing POD");
+    print "1..0 Skip # Test::Pod::Coverage 1.00 required for testing POD\n";
 }
 else {
     if ( $ENV{RELEASE_TESTING} ) {
         all_pod_coverage_ok( { also_private => $ALSO_PRIVATE } );
     }
     else {
-        plan tests => 1;
-        skip( "Author only private tests" );
+        print "1..0 # Skip Author only pod coverage tests not required\n";
     }
 }
 

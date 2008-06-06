@@ -22,3 +22,6 @@ Revision history for Perl extension Digest::JHash.
     - Moved developer only tests kwalitee.t and spelling.t to misc/ to
       stop kwalitee from demanding they be listed as build pre-reqs in META.yml
 
+0.05 Friday Jun 06 2008
+    - Patched to make algorithm compatible with unwanted 64 bit int in U32
+
