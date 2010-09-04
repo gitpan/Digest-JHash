@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Digest-JHash
-version:            0.06
+version:            0.07
 abstract:           Perl extension for 32 bit Jenkins Hashing Algorithm
 author:
     - Dr James Freeman
