@@ -2,6 +2,9 @@ package Digest::JHash;
 
 use strict;
 use warnings;
+
+require 5.008;
+
 require Exporter;
 require DynaLoader;
 use vars qw(@ISA @EXPORT_OK $VERSION);
@@ -9,7 +12,7 @@ use vars qw(@ISA @EXPORT_OK $VERSION);
 @ISA = qw(Exporter DynaLoader);
 
 @EXPORT_OK = qw( jhash );
-$VERSION   = '0.07';
+$VERSION   = '0.08';
 
 bootstrap Digest::JHash $VERSION;
 
